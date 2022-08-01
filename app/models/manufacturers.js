@@ -1,9 +1,9 @@
 const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../database/client");
 
-class Constructors extends Model {}
+class Manufacturers extends Model {}
 
-Constructors.init({
+Manufacturers.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false
@@ -18,8 +18,8 @@ Constructors.init({
   },
 }, {
   sequelize,
-  tableName: "constructor"
+  tableName: "manufacturer"
 });
 
 
-module.exports = Constructors;
+module.exports = Manufacturers;

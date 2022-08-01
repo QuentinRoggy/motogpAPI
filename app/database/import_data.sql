@@ -27,7 +27,7 @@ VALUES
   ('Moto 2'),
   ('Moto 3');
 
-INSERT INTO constructor("name", model, "engine")
+INSERT INTO manufacturer("name", model, "engine")
 VALUES
 ('Yamaha','M1','4 Cyl'),
 ('Ducati','Desmocedici','V4'),
@@ -36,7 +36,7 @@ VALUES
 ('KTM','RC 16','V4'),
 ('Aprilia','RS-GP','V4');
 
-INSERT INTO team("name",constructor_id,is_official,championship_id)
+INSERT INTO team("name",manufacturer_id,is_official,championship_id)
 VALUES
 ('Aprilia Racing',6,true,1),
 ('Ducati Lenovo Team',2,true,1),
@@ -54,32 +54,32 @@ VALUES
 INSERT INTO competitor(last_name, first_name, race_number, gender, birthday, nationality_id, team_id)
 VALUES
 ('Oliveira','Miguel',88,'Male','1995-01-03T23:00:00.000Z',4,8),
-('Martin','Jorge',89,'Male','1998-01-28T23:00:00.000Z',2,7),
-('Divizioso','Andrea',04,'Male','1986-02-22T23:00:00.000Z',3,12),
-('Marquez','Marc',93,'Male','1993-02-16T23:00:00.000Z',2,9),
-('Zarco','Johann',5,'Male','1990-07-15T22:00:00.000Z',1,7),
-('Quartararo','Fabio',20,'Male','1999-04-19T22:00:00.000Z',1,1),
-('Espargaro','Pol',44,'Male','1991-06-09T22:00:00.000Z',2,9),
-('Bradl','Stefan',6,'Male','1989-11-28T23:00:00.000Z',11,9),
-('Marini','Luca',10,'Male','1997-08-09T22:00:00.000Z',3,6),
-('Viñales','Maverick',12,'Male','1995-01-11T23:00:00.000Z',2,2),
-('Gardner','Remy',87,'Male','1998-02-23T23:00:00.000Z',15,11),
-('Marquez','Alex',73,'Male','1996-04-22T22:00:00.000Z',2,5),
-('Morbidelli','Franco',21,'Male','1994-12-03T23:00:00.000Z',3,1),
-('Bastianini','Enea',23,'Male','1997-12-29T23:00:00.000Z',3,4),
-('Fernandez','Raul',25,'Male','2000-10-22T22:00:00.000Z',2,11),
-('Nakagami','Takaaki',30,'Male','1992-02-08T23:00:00.000Z',7,5),
-('Savadori','Lorenzo',32,'Male','1993-04-03T22:00:00.000Z',3,2),
+('Martin','Jorge',89,'Male','1998-01-28T23:00:00.000Z',2,5),
+('Divizioso','Andrea',04,'Male','1986-02-22T23:00:00.000Z',3,11),
+('Marquez','Marc',93,'Male','1993-02-16T23:00:00.000Z',2,6),
+('Zarco','Johann',5,'Male','1990-07-15T22:00:00.000Z',1,5),
+('Quartararo','Fabio',20,'Male','1999-04-19T22:00:00.000Z',1,7),
+('Espargaro','Pol',44,'Male','1991-06-09T22:00:00.000Z',2,6),
+('Bradl','Stefan',6,'Male','1989-11-28T23:00:00.000Z',11,6),
+('Marini','Luca',10,'Male','1997-08-09T22:00:00.000Z',3,12),
+('Viñales','Maverick',12,'Male','1995-01-11T23:00:00.000Z',2,1),
+('Gardner','Remy',87,'Male','1998-02-23T23:00:00.000Z',15,10),
+('Marquez','Alex',73,'Male','1996-04-22T22:00:00.000Z',2,4),
+('Morbidelli','Franco',21,'Male','1994-12-03T23:00:00.000Z',3,7),
+('Bastianini','Enea',23,'Male','1997-12-29T23:00:00.000Z',3,3),
+('Fernandez','Raul',25,'Male','2000-10-22T22:00:00.000Z',2,10),
+('Nakagami','Takaaki',30,'Male','1992-02-08T23:00:00.000Z',7,4),
+('Savadori','Lorenzo',32,'Male','1993-04-03T22:00:00.000Z',3,1),
 ('Binder','Brad',33,'Male','1995-08-10T22:00:00.000Z',17,8),
-('Mir','Joan',36,'Male','1997-08-31T22:00:00.000Z',2,10),
-('Binder','Darryn', 40,'Male','1998-01-20T23:00:00.000Z',17,12),
-('Espargaro','Aleix',41,'Male','1989-07-29T22:00:00.000Z',2,2),
-('Rins','Alex',42,'Male','1995-12-07T23:00:00.000Z',2,10),
-('Miller','Jack',43,'Male','1995-01-17T23:00:00.000Z',15,3),
-('Di Giannantonio','Fabio',49,'Male','1998-10-09T22:00:00.000Z',3,4),
-('Pirro','Michele',51,'Male','1986-07-04T22:00:00.000Z',3,3),
-('Bagnaia','Francesco',63,'Male','1997-01-13T23:00:00.000Z',3,3),
-('Bezzecchi','Marco',72,'Male','1998-11-11T23:00:00.000Z',3,6);
+('Mir','Joan',36,'Male','1997-08-31T22:00:00.000Z',2,9),
+('Binder','Darryn', 40,'Male','1998-01-20T23:00:00.000Z',17,11),
+('Espargaro','Aleix',41,'Male','1989-07-29T22:00:00.000Z',2,1),
+('Rins','Alex',42,'Male','1995-12-07T23:00:00.000Z',2,9),
+('Miller','Jack',43,'Male','1995-01-17T23:00:00.000Z',15,2),
+('Di Giannantonio','Fabio',49,'Male','1998-10-09T22:00:00.000Z',3,3),
+('Pirro','Michele',51,'Male','1986-07-04T22:00:00.000Z',3,2),
+('Bagnaia','Francesco',63,'Male','1997-01-13T23:00:00.000Z',3,2),
+('Bezzecchi','Marco',72,'Male','1998-11-11T23:00:00.000Z',3,12);
 INSERT INTO season("name")
 VALUES
 ('2022');

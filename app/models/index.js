@@ -1,14 +1,15 @@
 const Teams = require("./teams");
 const Championships = require("./championships");
-const Constructors = require("./constructors");
+const Manufacturers = require("./manufacturers");
+const Competitors = require("./competitors");
 
-Constructors.hasMany(Teams, {
-  foreignKey: "constructorId",
+Manufacturers.hasMany(Teams, {
+  foreignKey: "manufacturerId",
   as: "teamsList"
 });
-Teams.belongsTo(Constructors, {
-  foreignKey: "constructorId",
-  as: "constructor"
+Teams.belongsTo(Manufacturers, {
+  foreignKey: "manufacturerId",
+  as: "manufacturer"
 });
 
 Championships.hasMany(Teams, {
@@ -20,8 +21,19 @@ Teams.belongsTo(Championships, {
   as: "championship"
 });
 
+Teams.hasMany(Competitors, {
+  foreignKey: "teamId",
+  as: "competitorsList"
+});
+
+Competitors.belongsTo(Teams, {
+  foreignKey: "teamId",
+  as: "team"
+});
+
 module.exports = {
   Teams,
   Championships,
-  Constructors
+  Manufacturers,
+  Competitors
 };

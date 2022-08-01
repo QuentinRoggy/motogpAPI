@@ -8,7 +8,7 @@ Competitors.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  firstname: {
+  firstName: {
     type: DataTypes.STRING,
     allowNull: false
   },

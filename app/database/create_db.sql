@@ -1,6 +1,6 @@
 BEGIN;
 -- D'abord, on supprime les tables si elles existent
-DROP TABLE IF EXISTS competitor, nationality, team, championship, constructor, season, stage, track, session_type, "session", position, result;
+DROP TABLE IF EXISTS competitor, nationality, team, championship, manufacturer, season, stage, track, session_type, "session", position, result;
 
 CREATE TABLE IF NOT EXISTS nationality (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS championship (
   updated_at TIMESTAMPTZ
 );
 
-CREATE TABLE IF NOT EXISTS constructor (
+CREATE TABLE IF NOT EXISTS manufacturer (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "name" TEXT NOT NULL,
   model TEXT,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS constructor (
 CREATE TABLE IF NOT EXISTS team (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "name" TEXT NOT NULL,
-  constructor_id INTEGER REFERENCES constructor(id),
+  manufacturer_id INTEGER REFERENCES manufacturer(id),
   is_official BOOLEAN NOT NULL DEFAULT FALSE,
   championship_id INTEGER REFERENCES championship(id),
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),

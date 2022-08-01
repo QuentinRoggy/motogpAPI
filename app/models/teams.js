@@ -8,7 +8,7 @@ Teams.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  constructorId: {
+  manufacturerId: {
     type: DataTypes.INTEGER,
     allowNull: false
   },
